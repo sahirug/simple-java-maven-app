@@ -6,9 +6,14 @@ pipeline {
 		}
 	}
 	stages {
-		stage ('Building') {
+		stage ('Building-JAR') {
 			steps {
 				sh 'mvn clean install -U'
+			}
+		}
+		stage ('Building-Docker-Image') {
+			steps {
+				sh 'ls -la'
 			}
 		}
 	}
