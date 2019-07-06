@@ -6,9 +6,9 @@ pipeline {
 		}
 	}
 	stages {
-		stage ('Greeting') {
+		stage ('Building') {
 			steps {
-				sh 'echo "Hello world"'
+				sh 'mvn --version'
 			}
 		}
 	}
